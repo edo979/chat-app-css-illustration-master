@@ -33,24 +33,58 @@
           the chat.
         </p>
       </article>
-      <div class="screen">
-        <div class="screen_top"></div>
-        <div class="screen_msg"></div>
-        <div class="screen_msg"></div>
-        <div class="screen_img-container"></div>
-        <div class="screen_msg --msg-left"></div>
-        <div class="screen_msg --msg-left"></div>
-        <div class="screen_msg"></div>
-        <div class="screen_msg --select-form"></div>
-        <div class="screen_input"></div>
-      </div>
-    </div>
-    Samuel Green Available to Walk That sounds great. I’d be happy with that.
-    Could you send over some pictures of your dog, please? Here are a few
-    pictures. She’s a happy girl! Can you make it? She looks so happy! The time
-    we discussed works. How long shall I take her out for? 30 minute walk $29 1
-    hour walk $49 Type a message…
 
+      <section class="screen">
+        <div class="user">
+          <span> < </span>
+          <div class="user_avatar">
+            <img src="images/avatar.jpg" alt="user avatar" />
+            <div class="user_info">
+              <span class="user_name"> Samuel Green </span>
+              <span class="user_status"> Available to Walk </span>
+            </div>
+          </div>
+        </div>
+        <div class="screen_msg">That sounds great. I’d be happy with that.</div>
+        <div class="screen_msg">
+          Could you send over some pictures of your dog, please?
+        </div>
+        <div class="screen_img-container flex">
+          <img src="images/dog-image-1.jpg" alt="dog" />
+          <img src="images/dog-image-2.jpg" alt="dog" />
+          <img src="images/dog-image-3.jpg" alt="dog" />
+        </div>
+        <div class="screen_msg --msg-left">
+          Here are a few pictures. She’s a happy girl!
+        </div>
+        <div class="screen_msg --msg-left">Can you make it?</div>
+        <div class="screen_msg">
+          She looks so happy! The time we discussed works. How long shall I take
+          her out for?
+        </div>
+        <div class="screen_msg --select-form">
+          <input type="radio" name="walk-time" id="walk-time-30" />
+          <label for="walk-time-30">
+            <span>30 minute walk</span>
+            <span>$29</span>
+          </label>
+        </div>
+        <div class="screen_msg --select-form">
+          <input type="radio" name="walk-time" id="walk-time-60" />
+          <label for="walk-time-60">
+            <span>1 hour walk</span>
+            <span>$49</span>
+          </label>
+        </div>
+        <div class="screen_input">
+          <input
+            type="text"
+            placeholder="Type a message…
+          "
+          />
+        </div>
+      </section>
+    </div>
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
