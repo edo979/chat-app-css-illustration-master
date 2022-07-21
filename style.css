@@ -60,6 +60,13 @@ select {
   font: inherit;
 }
 
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
 /* UTILITY CLASSES */
 .fw-semi-bold {
   font-weight: var(--fw-semi-bold);
@@ -73,6 +80,7 @@ select {
   flex-direction: var(--f-direction, row);
   align-items: var(--f-align, center);
   justify-content: var(--f-justify, space-between);
+  gap: var(--f-gap, 1rem);
 }
 
 /* GENERAL STYLING */
@@ -88,10 +96,22 @@ h1 {
   color: var(--clr-neutral-800);
 }
 
-/* MAIN-CONTAINER */
+/* LAYOUT */
+.main-container {
+  --max-width: 1110px;
+  --padding: 2rem;
+
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+}
 .main-container.flex {
   --f-direction: column;
-  flex-basis: 100%;
+  --f-gap: 1rem;
+}
+
+.main-container.flex > * {
+  flex: 1 1 100%;
+  outline: 1px solid red;
 }
 
 @media (min-width: 50em) {
