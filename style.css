@@ -155,8 +155,36 @@ body {
   overflow: hidden;
 }
 
+.screen_msg {
+  --b-radius: 10px;
+
+  width: 130px;
+  margin: 8px;
+  padding: 8px;
+  border-top-left-radius: var(--b-radius);
+  border-top-right-radius: var(--b-radius);
+  border-bottom-right-radius: var(--b-radius);
+  border-bottom-left-radius: calc(var(--b-radius) / 2);
+
+  font-size: var(--fs-fix-300);
+  line-height: 1.4;
+  color: var(--clr-text-500);
+
+  background-color: var(--clr-neutral-300);
+}
+
 .screen_img-container {
   --f-direction: row;
+  --f-justify: end;
+  --f-gap: 8px;
+}
+
+.screen_img-container div {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 /* USER */
@@ -222,15 +250,4 @@ body {
   height: 2px;
   width: 2px;
   background-color: var(--clr-text-200);
-}
-
-.screen_msg {
-  width: 130px;
-  margin: 8px;
-  padding: 8px;
-
-  font-size: var(--fs-fix-300);
-  color: var(--clr-text-500);
-
-  background-color: var(--clr-neutral-300);
 }
