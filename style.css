@@ -10,6 +10,12 @@
   --clr-neutral-400: hsl(0, 0%, 65%);
   --clr-neutral-800: hsl(271, 36%, 24%);
 
+  --clr-gradient: linear-gradient(
+    to left,
+    var(--clr-magneta),
+    var(--clr-violet)
+  );
+
   --clr-text-200: hsl(206, 6%, 79%); /* placeholder text */
   --clr-text-300: hsl(
     276,
@@ -131,6 +137,7 @@ body {
 .screen {
   border: 9px solid var(--clr-neutral-100);
   border-radius: 30px;
+  overflow: hidden;
 }
 
 .screen_img-container {
@@ -139,9 +146,30 @@ body {
 
 /* USER */
 .user {
+  position: relative;
+
   display: flex;
   align-items: center;
   gap: 1rem;
+
+  padding: 30px 15px 10px;
+  border-radius: var(--b-radius, 5px);
+
+  background-image: var(--clr-gradient);
+}
+
+.user::before {
+  content: '';
+
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 125px;
+  height: 38px;
+  border-radius: 15px;
+
+  background-color: var(--clr-neutral-100);
 }
 
 .user_avatar {
