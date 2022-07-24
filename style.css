@@ -7,6 +7,7 @@
 
   --clr-neutral-100: hsl(0, 0%, 100%);
   --clr-neutral-200: hsl(270, 20%, 96%);
+  --clr-neutral-300: hsl(0, 0%, 91%);
   --clr-neutral-400: hsl(0, 0%, 65%);
   --clr-neutral-800: hsl(271, 36%, 24%);
 
@@ -221,4 +222,15 @@ body {
   height: 2px;
   width: 2px;
   background-color: var(--clr-text-200);
+}
+
+.screen_msg {
+  width: 130px;
+  margin: 8px;
+  padding: 8px;
+
+  font-size: var(--fs-fix-300);
+  color: var(--clr-text-500);
+
+  background-color: var(--clr-neutral-300);
 }
