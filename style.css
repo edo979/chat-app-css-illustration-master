@@ -123,3 +123,36 @@ h1 {
 .text-content {
   order: 1;
 }
+
+/* SCREEN */
+.screen_img-container {
+  --f-direction: row;
+}
+
+/* USER */
+.user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user_avatar {
+  width: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user_menu {
+  --f-gap: 2px;
+  --f-direction: column;
+
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+}
+
+.user_menu span {
+  height: 2px;
+  width: 2px;
+  background-color: black;
+}
