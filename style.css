@@ -2,17 +2,23 @@
 
 :root {
   --clr-magneta: hsl(293, 100%, 63%);
-  --clr-magneta-300: hsl(289, 100%, 72%);
+  --clr-magneta-300: hsl(289, 100%, 72%); /* radio button outline */
+  --clr-magneta-200: hsl(289, 100%, 92%);
   --clr-violet: hsl(264, 100%, 61%);
 
   --clr-neutral-100: hsl(0, 0%, 100%);
-  --clr-neutral-200: hsl(270, 20%, 96%);
+  --clr-neutral-200: hsl(270, 20%, 96%); /* app background */
   --clr-neutral-300: hsl(293, 25%, 92%);
   --clr-neutral-400: hsl(0, 0%, 65%);
-  --clr-neutral-800: hsl(271, 36%, 24%);
+  --clr-neutral-800: hsl(271, 36%, 24%); /* submit button background */
 
   --clr-gradient: linear-gradient(
     to left,
+    var(--clr-magneta),
+    var(--clr-violet)
+  );
+  --clr-gradient-reverse: linear-gradient(
+    to right,
     var(--clr-magneta),
     var(--clr-violet)
   );
@@ -38,6 +44,7 @@
 
   --fs-fix-300: 8px;
   --fs-fix-400: 11px;
+  --fs-fix-500: 12px;
 
   --fs-200: 0.75rem;
   --fs-300: 0.85rem;
@@ -88,6 +95,10 @@ svg {
 
 .text-white {
   color: var(--clr-neutral-100);
+}
+
+.text-magneta-200 {
+  color: var(--clr-magneta-200);
 }
 
 .flex {
@@ -206,6 +217,34 @@ body {
   margin-top: 15px;
 }
 
+.screen_msg.--select-form {
+  --f-direction: row;
+  --f-gap: 8px;
+
+  width: 160px;
+  max-width: 160px;
+
+  color: var(--clr-magneta-200);
+  background-image: var(--clr-gradient-reverse);
+}
+
+.screen_msg.--select-form span:first-of-type {
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--clr-magneta-300);
+  border-radius: 50%;
+}
+
+.screen_msg.--select-form span:last-of-type {
+  margin-left: auto;
+  margin-right: 10px;
+  padding-block: 2px;
+
+  font-size: var(--fs-fix-500);
+  font-weight: var(--fw-bold);
+  color: var(--clr-neutral-100);
+}
+
 /* USER */
 .user {
   position: relative;
@@ -249,6 +288,7 @@ body {
 
 .user_title {
   font-size: var(--fs-fix-400);
+  font-weight: var(--fw-semi-bold);
 }
 
 .user_subtitle {
