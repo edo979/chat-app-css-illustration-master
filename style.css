@@ -115,6 +115,7 @@ h1 {
   --max-width: 1110px;
   --padding: 2rem;
 
+  margin-top: 60px;
   width: min(var(--max-width), 100% - (var(--padding) * 2));
   margin-inline: auto;
 }
@@ -128,6 +129,10 @@ h1 {
 }
 
 @media (min-width: 50em) {
+  .main-container {
+    margin: 0;
+  }
+
   .main-container.flex {
     --f-direction: row;
   }
@@ -175,7 +180,7 @@ body {
   left: 50%;
   transform: translate(-50%, 50%);
   width: 130px;
-  height: 37px;
+  height: 33px;
   border-radius: 13px;
 
   background-color: var(--clr-neutral-100);
