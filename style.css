@@ -135,12 +135,24 @@ h1 {
 }
 
 @media (min-width: 50em) {
+  body {
+    height: 100vh;
+    display: grid;
+    align-items: center;
+  }
+
   .main-container {
     --f-direction: row;
     --f-gap: 0rem;
 
     margin: 0;
     margin-inline: auto;
+  }
+
+  .attribution {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
   }
 }
 
@@ -165,6 +177,7 @@ body {
   border-radius: 30px;
   overflow: hidden;
 
+  background-color: var(--clr-neutral-200);
   box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.06);
 }
 
@@ -345,4 +358,33 @@ body {
 /* TEXT CONTENT */
 .text-content {
   line-height: 1.5;
+}
+
+/* BACKGROUND IMAGE */
+
+.main-container::before {
+  content: '';
+  position: absolute;
+  width: 580px;
+  height: 700px;
+  right: 50%;
+  top: -35%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+
+  background-image: linear-gradient(
+    45deg,
+    var(--clr-violet),
+    var(--clr-magneta)
+  );
+
+  z-index: -1;
+}
+
+@media (min-width: 50em) {
+  .main-container::before {
+    right: auto;
+    left: -208px;
+    top: 0;
+  }
 }
