@@ -126,7 +126,7 @@ h1 {
 
 .main-container {
   --max-width: 820px;
-  --padding: 2rem;
+  --padding: 1.5rem;
   --f-direction: column;
   --f-gap: 1rem;
 
@@ -379,6 +379,13 @@ body {
 
 .text-content {
   line-height: 1.6;
+  text-align: center;
+}
+
+@media (min-width: 50em) {
+  .text-content {
+    text-align: left;
+  }
 }
 
 /* BACKGROUND IMAGE */
