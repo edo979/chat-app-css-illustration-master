@@ -156,6 +156,8 @@ h1 {
     --f-direction: row;
     --f-gap: 0rem;
 
+    position: static;
+
     margin: 0;
     margin-inline: auto;
   }
@@ -421,5 +423,11 @@ body {
     right: auto;
     left: -208px;
     top: 0;
+  }
+
+  .main-container::after {
+    left: auto;
+    right: -208px;
+    bottom: 0;
   }
 }
