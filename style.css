@@ -362,11 +362,16 @@ body {
 
 /* BACKGROUND IMAGE */
 
-.main-container::before {
+.main-container::before,
+.main-container::after {
   content: '';
   position: absolute;
   width: 580px;
   height: 700px;
+  z-index: -1;
+}
+
+.main-container::before {
   right: 50%;
   top: -35%;
   border-bottom-right-radius: 50%;
@@ -377,8 +382,13 @@ body {
     var(--clr-violet),
     var(--clr-magneta)
   );
+}
 
-  z-index: -1;
+.main-container::after {
+  left: 50%;
+  bottom: -35%;
+
+  background-color: red;
 }
 
 @media (min-width: 50em) {
