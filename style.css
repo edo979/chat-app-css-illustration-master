@@ -126,27 +126,22 @@ h1 {
 .main-container {
   --max-width: 1110px;
   --padding: 2rem;
+  --f-direction: column;
+  --f-gap: 1rem;
 
   margin-top: 60px;
   width: min(var(--max-width), 100% - (var(--padding) * 2));
   margin-inline: auto;
 }
-.main-container.flex {
-  --f-direction: column;
-  --f-gap: 1rem;
-}
-
-.main-container.flex > * {
-  flex: 1 1 100%;
-}
 
 @media (min-width: 50em) {
   .main-container {
-    margin: 0;
-  }
-
-  .main-container.flex {
     --f-direction: row;
+    --f-justify: center;
+    --f-gap: 5rem;
+
+    margin: 0;
+    margin-inline: auto;
   }
 }
 
@@ -161,9 +156,12 @@ body {
 /* SCREEN */
 .screen {
   width: 250px;
+  flex-shrink: 0;
   border: 10px solid var(--clr-neutral-100);
   border-radius: 30px;
   overflow: hidden;
+
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.06);
 }
 
 .screen_msg {
@@ -338,4 +336,10 @@ body {
   height: 2px;
   width: 2px;
   background-color: var(--clr-text-200);
+}
+
+/* TEXT CONTENT */
+.text-content {
+  width: 45ch;
+  line-height: 1.5;
 }
